@@ -45,6 +45,7 @@ class FakeReleasePlan {
       access: "restricted",
       baseBranch: "master",
       updateInternalDependencies: "patch",
+      updateInternalDependents: false,
       ignore: [],
       ___experimentalUnsafeOptions_WILL_CHANGE_IN_PATCH: {
         onlyUpdatePeerDependentsWhenOutOfRange: false,
@@ -80,6 +81,7 @@ async function testSetup(
       access: "restricted",
       baseBranch: "master",
       updateInternalDependencies: "patch",
+      updateInternalDependents: false,
       ignore: [],
       ___experimentalUnsafeOptions_WILL_CHANGE_IN_PATCH: {
         onlyUpdatePeerDependentsWhenOutOfRange: false,
@@ -413,6 +415,7 @@ describe("apply release plan", () => {
           access: "restricted",
           baseBranch: "master",
           updateInternalDependencies: "patch",
+          updateInternalDependents: false,
           ignore: [],
           ___experimentalUnsafeOptions_WILL_CHANGE_IN_PATCH: {
             onlyUpdatePeerDependentsWhenOutOfRange: false,
@@ -474,6 +477,7 @@ describe("apply release plan", () => {
           access: "restricted",
           baseBranch: "master",
           updateInternalDependencies: "patch",
+          updateInternalDependents: false,
           ignore: [],
           ___experimentalUnsafeOptions_WILL_CHANGE_IN_PATCH: {
             onlyUpdatePeerDependentsWhenOutOfRange: false,
@@ -539,6 +543,7 @@ describe("apply release plan", () => {
               access: "restricted",
               baseBranch: "master",
               updateInternalDependencies,
+              updateInternalDependents: false,
               ignore: [],
               ___experimentalUnsafeOptions_WILL_CHANGE_IN_PATCH: {
                 onlyUpdatePeerDependentsWhenOutOfRange: false,
@@ -622,6 +627,7 @@ describe("apply release plan", () => {
               access: "restricted",
               baseBranch: "master",
               updateInternalDependencies,
+              updateInternalDependents: false,
               ignore: [],
               ___experimentalUnsafeOptions_WILL_CHANGE_IN_PATCH: {
                 onlyUpdatePeerDependentsWhenOutOfRange: false,
@@ -697,6 +703,7 @@ describe("apply release plan", () => {
               access: "restricted",
               baseBranch: "master",
               updateInternalDependencies,
+              updateInternalDependents: false,
               ignore: [],
               ___experimentalUnsafeOptions_WILL_CHANGE_IN_PATCH: {
                 onlyUpdatePeerDependentsWhenOutOfRange: false,
@@ -772,6 +779,7 @@ describe("apply release plan", () => {
               access: "restricted",
               baseBranch: "master",
               updateInternalDependencies,
+              updateInternalDependents: false,
               ignore: [],
               ___experimentalUnsafeOptions_WILL_CHANGE_IN_PATCH: {
                 onlyUpdatePeerDependentsWhenOutOfRange: false,
@@ -850,6 +858,7 @@ describe("apply release plan", () => {
               access: "restricted",
               baseBranch: "master",
               updateInternalDependencies,
+              updateInternalDependents: false,
               ignore: [],
               ___experimentalUnsafeOptions_WILL_CHANGE_IN_PATCH: {
                 onlyUpdatePeerDependentsWhenOutOfRange: false,
@@ -933,6 +942,7 @@ describe("apply release plan", () => {
               access: "restricted",
               baseBranch: "master",
               updateInternalDependencies,
+              updateInternalDependents: false,
               ignore: [],
               ___experimentalUnsafeOptions_WILL_CHANGE_IN_PATCH: {
                 onlyUpdatePeerDependentsWhenOutOfRange: false,
@@ -1008,6 +1018,7 @@ describe("apply release plan", () => {
               access: "restricted",
               baseBranch: "master",
               updateInternalDependencies,
+              updateInternalDependents: false,
               ignore: [],
               ___experimentalUnsafeOptions_WILL_CHANGE_IN_PATCH: {
                 onlyUpdatePeerDependentsWhenOutOfRange: false,
@@ -1083,6 +1094,7 @@ describe("apply release plan", () => {
               access: "restricted",
               baseBranch: "master",
               updateInternalDependencies,
+              updateInternalDependents: false,
               ignore: [],
               ___experimentalUnsafeOptions_WILL_CHANGE_IN_PATCH: {
                 onlyUpdatePeerDependentsWhenOutOfRange: false,
@@ -1162,6 +1174,7 @@ describe("apply release plan", () => {
             access: "restricted",
             baseBranch: "master",
             updateInternalDependencies: "patch",
+            updateInternalDependents: false,
             ignore: [],
             ___experimentalUnsafeOptions_WILL_CHANGE_IN_PATCH: {
               onlyUpdatePeerDependentsWhenOutOfRange: true,
@@ -1320,6 +1333,7 @@ describe("apply release plan", () => {
             null
           ],
           updateInternalDependencies: "patch",
+          updateInternalDependents: false,
           ignore: [],
           ___experimentalUnsafeOptions_WILL_CHANGE_IN_PATCH: {
             onlyUpdatePeerDependentsWhenOutOfRange: false,
@@ -1423,6 +1437,7 @@ describe("apply release plan", () => {
           access: "restricted",
           baseBranch: "master",
           updateInternalDependencies: "patch",
+          updateInternalDependents: false,
           ignore: [],
           ___experimentalUnsafeOptions_WILL_CHANGE_IN_PATCH: {
             onlyUpdatePeerDependentsWhenOutOfRange: false,
@@ -1456,7 +1471,7 @@ describe("apply release plan", () => {
 
       ## 1.2.1
       ### Patch Changes
-      
+
       - Hey, let's have fun with testing!
       - Updated dependencies [undefined]
         - pkg-a@1.0.4`);
@@ -1504,6 +1519,7 @@ describe("apply release plan", () => {
           access: "restricted",
           baseBranch: "master",
           updateInternalDependencies: "minor",
+          updateInternalDependents: false,
           ignore: [],
           ___experimentalUnsafeOptions_WILL_CHANGE_IN_PATCH: {
             onlyUpdatePeerDependentsWhenOutOfRange: false,
@@ -1535,7 +1551,7 @@ describe("apply release plan", () => {
 
       ## 1.2.1
       ### Patch Changes
-      
+
       - Hey, let's have fun with testing!`);
     });
 
@@ -1589,6 +1605,7 @@ describe("apply release plan", () => {
           access: "restricted",
           baseBranch: "master",
           updateInternalDependencies: "minor",
+          updateInternalDependents: false,
           ignore: [],
           ___experimentalUnsafeOptions_WILL_CHANGE_IN_PATCH: {
             onlyUpdatePeerDependentsWhenOutOfRange: false,
@@ -1624,7 +1641,7 @@ describe("apply release plan", () => {
 
       ## 1.2.1
       ### Patch Changes
-      
+
       - Hey, let's have fun with testing!
       - Updated dependencies [undefined]
         - pkg-c@2.1.0`);
@@ -1633,7 +1650,7 @@ describe("apply release plan", () => {
 
       ## 2.1.0
       ### Minor Changes
-      
+
       - Hey, let's have fun with testing!`);
     });
 
@@ -1687,6 +1704,7 @@ describe("apply release plan", () => {
           access: "restricted",
           baseBranch: "master",
           updateInternalDependencies: "minor",
+          updateInternalDependents: false,
           ignore: [],
           ___experimentalUnsafeOptions_WILL_CHANGE_IN_PATCH: {
             onlyUpdatePeerDependentsWhenOutOfRange: false,
@@ -1722,7 +1740,7 @@ describe("apply release plan", () => {
 
       ## 1.2.1
       ### Patch Changes
-      
+
       - Hey, let's have fun with testing!
       - Updated dependencies [undefined]
         - pkg-c@2.0.1`);
@@ -1731,7 +1749,7 @@ describe("apply release plan", () => {
 
       ## 2.0.1
       ### Patch Changes
-      
+
       - Hey, let's have fun with testing!`);
     });
   });
@@ -2086,6 +2104,7 @@ describe("apply release plan", () => {
           access: "restricted",
           baseBranch: "master",
           updateInternalDependencies: "patch",
+          updateInternalDependents: false,
           ignore: [],
           ___experimentalUnsafeOptions_WILL_CHANGE_IN_PATCH: {
             onlyUpdatePeerDependentsWhenOutOfRange: false,
